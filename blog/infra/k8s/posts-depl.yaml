@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: posts 
-          image: 200401073/posts:0.0.2
+          image: 200401073/posts
