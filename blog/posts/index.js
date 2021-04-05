@@ -41,6 +41,6 @@ app.post('/events', (req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log('No feeling is final ! God has a plan for you ! Have faith')
+  console.log('No feeling is final ! God has a plan for you ! Have faith my friend');
   console.log('Listening on 4000');
 });
