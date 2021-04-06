@@ -15,15 +15,15 @@ app.post("/events", (req, res) => {
   axios.post("http://posts-clusterip-srv:4000/events", event).catch((err) => {
     console.error(err.message);
   }); // posts
-  // axios.post("http://localhost:4001/events", event).catch((err) => {
-  //   console.error(err.message);
-  // }); // comments
-  // axios.post("http://localhost:4002/events", event).catch((err) => {
-  //   console.error(err.message);
-  // }); // query service
-  // axios.post("http://localhost:4003/events", event).catch((err) => {
-  //   console.error(err.message);
-  // }); // moderation service
+  axios.post("http://comments-srv:4001/events", event).catch((err) => {
+    console.error(err.message);
+  }); // comments
+  axios.post("http://query-srv:4002/events", event).catch((err) => {
+    console.error(err.message);
+  }); // query service
+  axios.post("http://moderation-srv:4003/events", event).catch((err) => {
+    console.error(err.message);
+  }); // moderation service
   
 
   res.send({ status: "OK" });
